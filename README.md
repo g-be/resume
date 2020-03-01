@@ -5,12 +5,9 @@ http://www.careercup.com/resume.
 The class is based on `article` class. The paper format is set to U.S. letterpaper by default. A template showing an example usage of the class is included.
 
 ## Screenshot
-<img src="https://github.com/dnl-blkv/mcdowell-cv/blob/master/McDowell_CV.png" width="240px"/>
+<img src="https://github.com/g-be/resume/blob/master/McDowell_CV.png" width=350px"/>
 
-## Use Cases
-- A great tool making it easy to build CVs: https://latexresu.me/.
-
-## Class Options
+# Class Options
  - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman since version 1.1.0.
 
 ## Commands
