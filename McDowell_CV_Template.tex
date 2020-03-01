@@ -1,6 +1,6 @@
 %% The MIT License (MIT)
 %%
-%% Copyright (c) 2015 Daniil Belyakov
+%% Copyright (c) 2020 Gabriel Medina
 %%
 %% Permission is hereby granted, free of charge, to any person obtaining a copy
 %% of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,9 @@
 \usepackage{amsmath}
 
 % Set applicant's personal data for header
-\name{Gayle L. McDowell}
-\address{123 Spruce St, Apt 35 \linebreak Philadelphia PA 19103}
-\contacts{(555) 555-1212 \linebreak gayle@careercup.com}
+\name{Gabriel Medina}
+\address{Norwalk CA 90650}
+\contacts{(916) 201-6951 \linebreak medina.gabe@gmail.com}
 
 \begin{document}
 
@@ -37,79 +37,67 @@
 	\makeheader
 	
 	% Print the content
-	\begin{cvsection}{Employment}
-		\begin{cvsubsection}{Software Engineer, Intern}{Apple Computer}{Summer 2004}
-			iChat AV			
+	\begin{cvsection}{Projects}
+		% ----------------------- projects -----------------------
+		\begin{cvsubsection}{DEEP MEME Secure Messaging Android App}{}{Senior Project}
+			Encrypted messages embedded into image files enables private message sharing in innocuous memes: 
 			\begin{itemize}
-				\item Reduced time to render the user’s buddy list by 75\% by implementing prediction algorithm.
-				\item Implemented iChat integration with OS X Spotlight Search by creating tool which extracts metadata from saved chat transcripts and provides metadata to a system-wide search database.
-				\item Redesigned chat file format and implemented backwards compatibility for search.
+				\item Uses RSA encryption algorithm and 2048-bit public/private key pairs.
+				\item Android KeyStore creates and manages private key (the app can use the key but not read it).
+				\item Open source steganographic algorithm to embed the message into the image file.
+				\item Public keys are easily shared in person via QR-code or via URL/URI.
+				\item Used SQLite database to store friendly public keys acquired from scanned QR codes.
 			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Lead Student Ambassador}{Microsoft Corporation}{Fall 2003 -- Spring 2005}	
+		\begin{cvsubsection}{Home Servers}{}{}
+			Dedicated Home Server (Headless Ubuntu):
 			\begin{itemize}
-				\item Promoted to Lead Student Ambassador in Fall 2004; supervised 10 -- 15 Student Ambassadors.
-				\item Created and taught Computer Science course, CSE 099: Software Design and Development.
+				\item PLEX Media Server (personal content streaming for myself and friends/family)
+				\item Automated media download services with local web apps.
+				\item File/filesystem management scripts 
 			\end{itemize}
+
+			Raspberry Pi 3/Zero:
+			\begin{itemize}
+				\item Discrete personal OpenVPN server
+				\item Local-network-wide ad-filtering and traffic monitoring (DNS service)
+				\item Spotify Connect smart speaker  
+				\item Wireless print server (enabling a wired printer to be wireless) 
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Head Teaching Assistant}{University of Pennsylvania}{Fall 2001 -- Spring 2005}		
-			\begin{itemize}
-				\item Courses: Advanced Java III, Software Engineering, Mathematical Foundations of Computer Science I \& II.
-				\item Promoted to Head TA in Fall 2004; led weekly meetings and supervised four other TAs.
-			\end{itemize}
+		\begin{cvsubsection}{Robot Vehicle with ‘Intelligent’ Decision-Making }{}{}		
+			Built a robot vehicle that would process input from hardware and make an “intelligent” decision.  Written in C for the Lego Mindstorms framework, interfacing with hardware “eyes” and “ears,” implementing Psychology concepts of human cognition and decision-making. 
 		\end{cvsubsection}
-		
-		\begin{cvsubsection}{Software Design Engineer, Intern}{Microsoft Corporation}{Summers 2001 -- 2003}
-			Visual Studio Core (Summer 2003)		
-			\begin{itemize}
-				\item Implemented a user interface for the VS open file switcher (ctrl-tab) and extended it to tool windows.
-				\item Created service to provide gradient across VS and VS add-ins. Optimized service via caching.
-			\end{itemize}
-			Programmer Productivity Research Center (Summers 2001, 2002)
-			\begin{itemize}
-				\item Built app to compute similarity of all methods in a code base; reduced time from $O(n^2)$ to $O(n\ log\ n)$. 
-				\item Created test case generation tool which creates random XML docs from XML Schema.
-			\end{itemize}
-		\end{cvsubsection}
+		% ----------------------- /projects -----------------------
 	\end{cvsection}
 	
 	\begin{cvsection}{Education}
-		\begin{cvsubsection}{Philadelphia, PA}{University of Pennsylvania}{Fall 2000 -- May 2005}
+		\begin{cvsubsection}{Carson, CA}{California State University, Dominguez Hills}{Fall 2017 -- May 2019}
 			\begin{itemize}
-				\item M.S.E. in Computer and Information Science, May 2005. GPA: 3.6
-				\item B.S.E. in Computer Science Engineering with Minor in Mathematics, May 2005.  In-major GPA: 3.4.
-				\item Graduate Coursework: Software Foundations; Computer Architecture; Algorithms; Artificial Intelligence; Comparison of Learning Algorithms; Computational Theory.
-				\item Undergraduate Coursework: Operating Systems; Databases; Algorithms; Programming Languages; Comp. Architecture; Engineering Entrepreneurship; Calculus III.
+				\item B.S.E. in Computer Science, May 2005.  In-major GPA: 3.3
+				\item Undergraduate Coursework: Networking; Security; Algorithms; Data Structures; Operating Systems; Programming Languages; Comp. Architecture; 
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
 	
-	\begin{cvsection}{Technical Experience}
-		\begin{cvsubsection}{Projects}{}{}
+	\begin{cvsection}{Tech & Skills}
+		\begin{cvsubsection}{}{}{}
 			\begin{itemize}
-				\item \textbf{Multi-User Drawing Tool} (2004). Electronic classroom where multiple users can view and simultaneously draw on a “chalkboard” with each person’s edits synchronized.  C++, MFC
-				\item \textbf{Synchronized Calendar} (2003 – 2004). Desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users.  C\#.NET, SQL, XML
-				\item \textbf{Operating System} (2002).  UNIX-style OS with scheduler, file system, text editor and calculator. C
+				\item \textbf{Languages} Java; Python; C++; C; SQL; Bash;
+				\item \textbf{Networking} Hands-On LAN administration: Routers; Repeaters; Modems; VPN Clients & Servers; Network Printers; Samba Shares; SSH Remote Access; Firewalls; Port Forwarding 
+				\item \textbf{Security} Asymmetric/Symmetric encryption; Cryptography; Network access control; Pen-testing
+				\item \textbf{Operating Systems} Linux {Ubuntu, Ubuntu Server, Raspbian}; Windows {10, 7, XP}; Virtual machines; Docker;
+				\item \textbf{Other} Microsoft Office Word & Excel; Adobe Photoshop & Illustrator;
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
 	
-	\begin{cvsection}{Additional Experience and Awards}
+	\begin{cvsection}{Additional Experience}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item \textbf{Instructor (2003 – 2005):} Taught two full-credit Computer Science courses; average ratings of 4.8 out of 5.0.
-				\item \textbf{Third Prize, Senior Design Projects:} Awarded 3rd prize for Synchronized Calendar project, out of 100 projects.
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
-	
-	\begin{cvsection}{Languages and Technologies}
-		\begin{cvsubsection}{}{}{}	
-			\begin{itemize}
-				\item C++; C; Java; Objective-C; C\#.NET; SQL; JavaScript; XSLT; XML (XSD) Schema 
-				\item Visual Studio; Microsoft SQL Server; Eclipse; XCode; Interface Builder
+				\item \textbf{Driving Instructor (2015-2020):} Safety 1st Driving School. One-on-one on-the-road instruction on how to drive.
+				\item \textbf{Freelance Tech Support (2010-2015):} Provide hardware and software tech support to friends and family.
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
