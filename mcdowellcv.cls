@@ -24,10 +24,10 @@
 
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
-\def\mainfontface{sourceserifpro}
+\def\mainfontface{quattrocento}
 
-\DeclareOption{sourceserifpro}{%
-  \def\mainfontface{sourceserifpro}
+\DeclareOption{times new roman}{%
+  \def\mainfontface{times new roman}
 }
 
 \ProcessOptions\relax
@@ -39,6 +39,7 @@
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
 
 % Set font face
+\usepackage{quattrocento}
 \usepackage{fontspec}
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
 Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
@@ -199,7 +200,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\notblank{#4}{\toggletrue{righttitledefined}}{}
 	\ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
 		\begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
-			\textbf{#2} & \textbf{#3} & \textbf{#4} \\
+			\textbf{\textit{#2}} & \textbf{#3} & \textbf{#4} \\
 		\end{tabu}
 		% Add space according to the specidied number of lines
 		\ifnumcomp{#1}{=}{1}{\vspace*{\aftersinglelinesubsectionheaderspace}}{
