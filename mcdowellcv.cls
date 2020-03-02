@@ -1,3 +1,4 @@
+
 %% The MIT License (MIT)
 %%
 %% Copyright (c) 2015 Daniil Belyakov
@@ -23,10 +24,10 @@
 
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
-\def\mainfontface{Times New Roman}
+\def\mainfontface{sourceserifpro}
 
-\DeclareOption{calibri}{%
-  \def\mainfontface{Calibri}
+\DeclareOption{sourceserifpro}{%
+  \def\mainfontface{sourceserifpro}
 }
 
 \ProcessOptions\relax
@@ -70,7 +71,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \usepackage{ifthen}
 \usepackage{ifplatform}
 
-% For spcaed small caps
+% For spaced small caps
+\usepackage{luatexbase}
 \usepackage{microtype}
 
 \DeclareMicrotypeSet*{smallcapsi} { 

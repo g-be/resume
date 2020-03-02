@@ -20,6 +20,9 @@
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 %% SOFTWARE.
 
+%% magic comment that determines recipe
+% !TEX program = lualatex
+
 % The font could be set to Windows-specific Calibri by using the 'calibri' option
 \documentclass[]{mcdowellcv}
 
@@ -37,10 +40,19 @@
 	\makeheader
 	
 	% Print the content
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}[2]{California State University, Dominguez Hills}{}{Fall 2017 -- May 2019}
+			\begin{itemize}
+				\item B.S. in Computer Science, In-major GPA: 3.3
+				\item Undergraduate Coursework: Networking; Security; Algorithms; Data Structures; Operating Systems
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+
 	\begin{cvsection}{Projects}
 		% ----------------------- projects -----------------------
-		\begin{cvsubsection}{DEEP MEME Secure Messaging Android App}{}{Senior Project}
-			Encrypted messages embedded into image files enables private message sharing in innocuous memes: 
+		\begin{cvsubsection}{Secure Messaging Android App}{}{Senior Project}
+			Encrypted messages embedded into image files enables private message sharing through memes: 
 			\begin{itemize}
 				\item Uses RSA encryption algorithm and 2048-bit public/private key pairs.
 				\item Android KeyStore creates and manages private key (the app can use the key but not read it).
@@ -50,45 +62,36 @@
 			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Home Servers}{}{}
-			Dedicated Home Server (Headless Ubuntu):
+		\begin{cvsubsection}{Homelab (Headless Ubuntu):}{}{}
 			\begin{itemize}
 				\item PLEX Media Server (personal content streaming for myself and friends/family)
-				\item Automated media download services with local web apps.
-				\item File/filesystem management scripts 
+				\item Automated media download services with local web interfaces.
+				\item File/filesystem management scripts.
 			\end{itemize}
-
-			Raspberry Pi 3/Zero:
+		\end{cvsubsection}
+		\begin{cvsubsection}{Raspberry Pi 3/Zero:}{}{}
 			\begin{itemize}
 				\item Discrete personal OpenVPN server
 				\item Local-network-wide ad-filtering and traffic monitoring (DNS service)
-				\item Spotify Connect smart speaker  
-				\item Wireless print server (enabling a wired printer to be wireless) 
+				\item Wireless print server (enabling a wired printer to be wireless)
+			\end{itemize}
 		\end{cvsubsection}
 		
-		\begin{cvsubsection}{Robot Vehicle with ‘Intelligent’ Decision-Making }{}{}		
-			Built a robot vehicle that would process input from hardware and make an “intelligent” decision.  Written in C for the Lego Mindstorms framework, interfacing with hardware “eyes” and “ears,” implementing Psychology concepts of human cognition and decision-making. 
+		\begin{cvsubsection}{‘Intelligent’ Robot Vehicle}{}{}		
+			Built a robot vehicle that would process input from hardware and make an “intelligent” decision.  
+			Written in C for the Lego Mindstorms framework, interfacing with hardware “eyes” and “ears,” implementing Psychology concepts of human cognition and decision-making. 
 		\end{cvsubsection}
 		% ----------------------- /projects -----------------------
 	\end{cvsection}
 	
-	\begin{cvsection}{Education}
-		\begin{cvsubsection}{Carson, CA}{California State University, Dominguez Hills}{Fall 2017 -- May 2019}
-			\begin{itemize}
-				\item B.S.E. in Computer Science, May 2005.  In-major GPA: 3.3
-				\item Undergraduate Coursework: Networking; Security; Algorithms; Data Structures; Operating Systems; Programming Languages; Comp. Architecture; 
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
-	
-	\begin{cvsection}{Tech & Skills}
+	\begin{cvsection}{Tech \& Skills}
 		\begin{cvsubsection}{}{}{}
 			\begin{itemize}
-				\item \textbf{Languages} Java; Python; C++; C; SQL; Bash;
-				\item \textbf{Networking} Hands-On LAN administration: Routers; Repeaters; Modems; VPN Clients & Servers; Network Printers; Samba Shares; SSH Remote Access; Firewalls; Port Forwarding 
+				\item \textbf{Languages} Java; Python; C++; C; SQL; Bash
+				\item \textbf{Networking} Hands-On LAN administration: Routers; Repeaters; Modems; VPN Clients \& Servers; Network Printers; Samba Shares; SSH Remote Access; Firewalls; Port Forwarding 
 				\item \textbf{Security} Asymmetric/Symmetric encryption; Cryptography; Network access control; Pen-testing
-				\item \textbf{Operating Systems} Linux {Ubuntu, Ubuntu Server, Raspbian}; Windows {10, 7, XP}; Virtual machines; Docker;
-				\item \textbf{Other} Microsoft Office Word & Excel; Adobe Photoshop & Illustrator;
+				\item \textbf{Operating Systems} Linux {Ubuntu, Ubuntu Server, Raspbian}; Windows {10, 7, XP}
+				\item \textbf{Other} Virtual machines \& Docker; Microsoft Office Word \& Excel; Adobe Photoshop \& Illustrator
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
@@ -96,7 +99,7 @@
 	\begin{cvsection}{Additional Experience}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item \textbf{Driving Instructor (2015-2020):} Safety 1st Driving School. One-on-one on-the-road instruction on how to drive.
+				\item \textbf{Driving Instructor (2015-2020):} Safety 1st Driving School. On-the-road instruction on how to drive.
 				\item \textbf{Freelance Tech Support (2010-2015):} Provide hardware and software tech support to friends and family.
 			\end{itemize}
 		\end{cvsubsection}
