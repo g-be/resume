@@ -65,7 +65,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \usepackage{enumitem}
 % Remove left margin from lists, suppress vertical item separation and set top 
 % separation to a negative value to suppress a single parskip before lists
-\setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
+\setlist{leftmargin=*, itemsep=3pt, parsep=0pt, topsep=-1\parskip}
 
 % For adjusting spacing based on the platform used
 \usepackage{ifthen}
@@ -105,7 +105,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\def\sectionheadermargin{6pt}
 	\def\beforesectionheaderhrulespace{3pt}
 	\def\sectionheaderhrlueheight{0.5pt}
-	\def\aftersectionheaderspace{-4pt}
+	\def\aftersectionheaderspace{-2pt}
 	\def\aftersinglelinesubsectionheaderspace{-18.5pt}
 	\def\afterdoublelinesubsectionheaderspace{-10pt}
 	\def\aftermultilinesubsectionheaderspace{-6pt}
