@@ -24,11 +24,14 @@
 
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
-\def\mainfontface{quattrocento}
+\def\mainfontface{sourceserifpro}
+\def\sansfontface{ibmplexsans-text}
 
-\DeclareOption{times new roman}{%
-  \def\mainfontface{times new roman}
-}
+% suggested: xcharter texGyrePagella texGyreTermes 
+
+% \DeclareOption{times new roman}{%
+%   \def\mainfontface{times new roman}
+% }
 
 \ProcessOptions\relax
 
@@ -39,10 +42,11 @@
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
 
 % Set font face
-\usepackage{quattrocento}
+% \usepackage{\mainfontface}
+% \usepackage{\sansfontface}
 \usepackage{fontspec}
-\setmainfont[SmallCapsFeatures={Renderer=Basic},
-Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
+\setmainfont{\mainfontface}
+\setsansfont{\sansfontface}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
@@ -74,12 +78,12 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % For spaced small caps
 \usepackage{luatexbase}
-\usepackage{microtype}
+% \usepackage{microtype}
 
-\DeclareMicrotypeSet*{smallcapsi} { 
-	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
-	shape = {sc*,si,scit}
-}
+% \DeclareMicrotypeSet*{smallcapsi} { 
+% 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
+% 	shape = {sc*,si,scit}
+% }
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
@@ -141,7 +145,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\typeout {kokoko}
 	\typeout \spaceskip
 	\spaceskip \namespaceskip \relax
-	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
+	\textbf{\LARGE\textsc{\@name}}
 }
 
 \makeatother
@@ -179,7 +183,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\vspace*{\beforesectionheaderspace}
 	% Set text margins to equal \tabcolsep (6pt by default)
 	\begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
-		\textsc{\textbf{#1}}
+		\textbf{#1}
 	\end{adjustwidth}
 	\vspace*{\beforesectionheaderhrulespace}
 	\hrule height \sectionheaderhrlueheight
@@ -191,16 +195,16 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \makeatletter
 % Define toggles checking if titles were defined
 \newtoggle{lefttitledefined}
-\newtoggle{centertitledefined}
+
 \newtoggle{righttitledefined}
 
-\newenvironment{cvsubsection}[4][1]{
+\newenvironment{cvsubsection}[3][1]{
 	\notblank{#2}{\toggletrue{lefttitledefined}}{}
-	\notblank{#3}{\toggletrue{centertitledefined}}{}
-	\notblank{#4}{\toggletrue{righttitledefined}}{}
-	\ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
-		\begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
-			\textbf{\textit{#2}} & \textbf{#3} & \textbf{#4} \\
+
+	\notblank{#3}{\toggletrue{righttitledefined}}{}
+	\ifboolexpr{togl {lefttitledefined} or togl {righttitledefined}}{
+		\begin{tabu} to 1\textwidth { X[l,p] X[r,p] }
+			\textbf{\textit{#2}} & \textbf{#3} \\
 		\end{tabu}
 		% Add space according to the specidied number of lines
 		\ifnumcomp{#1}{=}{1}{\vspace*{\aftersinglelinesubsectionheaderspace}}{
@@ -212,7 +216,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 		\vspace*{\afteremptysubsectionheaderspace}
 	}
 	\togglefalse{lefttitledefined}
-	\togglefalse{centertitledefined}
+
 	\togglefalse{righttitledefined}
 	\begin{adjustwidth}{\subsectionmargin}{\subsectionmargin}
 }
