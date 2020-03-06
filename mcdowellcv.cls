@@ -195,12 +195,10 @@
 \makeatletter
 % Define toggles checking if titles were defined
 \newtoggle{lefttitledefined}
-
 \newtoggle{righttitledefined}
 
 \newenvironment{cvsubsection}[3][1]{
 	\notblank{#2}{\toggletrue{lefttitledefined}}{}
-
 	\notblank{#3}{\toggletrue{righttitledefined}}{}
 	\ifboolexpr{togl {lefttitledefined} or togl {righttitledefined}}{
 		\begin{tabu} to 1\textwidth { X[l,p] X[r,p] }
