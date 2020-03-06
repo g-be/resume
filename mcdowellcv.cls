@@ -25,7 +25,7 @@
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
 \def\mainfontface{sourceserifpro}
-\def\sansfontface{ibmplexsans-text}
+\def\sansfontface{opensans}
 
 % suggested: xcharter texGyrePagella texGyreTermes 
 
@@ -78,12 +78,12 @@
 
 % For spaced small caps
 \usepackage{luatexbase}
-% \usepackage{microtype}
+\usepackage{microtype}
 
-% \DeclareMicrotypeSet*{smallcapsi} { 
-% 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
-% 	shape = {sc*,si,scit}
-% }
+\DeclareMicrotypeSet*{smallcapsi} { 
+	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
+	shape = {sc*,si,scit}
+}
 
 %--------------------------------------------------------------------------------
 %                                    Constants                                  -
@@ -145,7 +145,7 @@
 	\typeout {kokoko}
 	\typeout \spaceskip
 	\spaceskip \namespaceskip \relax
-	\textbf{\LARGE\textsc{\@name}}
+	\textls{\LARGE\textsf{\@name}}
 }
 
 \makeatother
