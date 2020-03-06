@@ -9,7 +9,7 @@ The class is based on `article` class. The paper format is set to U.S. letterpap
 <img src="https://github.com/g-be/resume/blob/master/McDowell_CV.png" width=350px"/> 
 -->
 
-# Class Options
+## Class Options
  - `SourceSerifPro` - sets the main font. 
  - `OpenSans` - sets the serif font.
 
