@@ -4,11 +4,14 @@ http://www.careercup.com/resume.
 
 The class is based on `article` class. The paper format is set to U.S. letterpaper by default. A template showing an example usage of the class is included.
 
+<!-- 
 ## Screenshot
-<img src="https://github.com/g-be/resume/blob/master/McDowell_CV.png" width=350px"/>
+<img src="https://github.com/g-be/resume/blob/master/McDowell_CV.png" width=350px"/> 
+-->
 
 # Class Options
- - `calibri` - sets calibri as the main font. Otherwise the default font is Times New Roman since version 1.1.0.
+ - `SourceSerifPro` - sets the main font. 
+ - `OpenSans` - sets the serif font.
 
 ## Commands
 The class features the following commands:
@@ -19,7 +22,7 @@ The class features the following commands:
  
 ## Environments
  - `\begin{cvsection}{sectionname}` - prints a section with a header consisting of the name in bold small caps and a page-wide horizontal line below.
- - `\begin{cvsubsection}[linesnum]{left}{center}{right}{content}` - prints a subsection with header consisting of the `left`, `center` and `right` titles. The optional `linesnum` argument defines the amount of lines in the header. The argument only affects the vertical spacing between the environment header and content thus eliminating the effect of *tabu* package vertical spacing bug.
+ - `\begin{cvsubsection}[linesnum]{left}{right}{content}` - prints a subsection with header consisting of the `left` and `right` titles. The optional `linesnum` argument defines the amount of lines in the header. The argument only affects the vertical spacing between the environment header and content thus eliminating the effect of *tabu* package vertical spacing bug.
 
 ## Build Instructions
 - Make sure `lualatex` (see http://www.luatex.org/download.html) is installed on your machine and is available in the terminal or a command line client of your choice.
